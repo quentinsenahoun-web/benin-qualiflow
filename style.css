@@ -136,3 +136,20 @@ nav a:hover::after {
     opacity: 1;
     transform: translateY(0);
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
