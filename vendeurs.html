@@ -2,35 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Vendeurs – BENIN-QUALIFLOW</title>
+    <title>Espace Vendeurs | BENIN-QUALIFLOW</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
     <div class="logo">BENIN<span>-QUALIFLOW</span></div>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="vendeurs.html">Vendeurs</a>
         <a href="acheteurs.html">Acheteurs</a>
-        <a href="#">Catégories</a>
-        <a href="#">Contact</a>
-        <select id="languageSwitcher">
-            <option value="fr">FR</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-        </select>
     </nav>
 </header>
 
-<section class="vendeurs">
-    <h2>Inscription Vendeur</h2>
-    <iframe src="LIEN_DU_FORMULAIRE_GOOGLE" width="100%" height="600" style="border:none;"></iframe>
+<section class="hero">
+    <h1>Créer un compte vendeur</h1>
+    <p>Présentez vos produits et services aux acheteurs locaux</p>
+</section>
+
+<section class="how reveal">
+    <form class="form">
+        <input type="text" placeholder="Nom du vendeur" required>
+        <input type="text" placeholder="Produit / Service" required>
+        <input type="text" placeholder="Ville">
+        <textarea placeholder="Description"></textarea>
+        <button class="btn primary" type="submit">S’inscrire</button>
+    </form>
 </section>
 
 <footer>
-    <p>Cotonou – Bénin | © 2026 BENIN-QUALIFLOW</p>
+    <p>© BENIN-QUALIFLOW</p>
 </footer>
 
 <script src="script.js"></script>
