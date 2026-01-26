@@ -95,3 +95,44 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #1e90ff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(30,144,255,0.3);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
