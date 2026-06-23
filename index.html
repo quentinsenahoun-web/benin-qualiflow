@@ -3,79 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <title>BENIN-QUALIFLOW | Marketplace locale</title>
-
     <meta name="description" content="BENIN-QUALIFLOW, plateforme de mise en relation vendeurs et acheteurs au Bénin">
     <meta name="keywords" content="vente locale, marketplace bénin, vendeurs acheteurs, commerce bénin">
     <meta name="author" content="BENIN-QUALIFLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">BENIN<span>-QUALIFLOW</span></div>
-    <i class="fa-solid fa-store"></i>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="vendeurs.html">Vendeurs</a>
-        <a href="acheteurs.html">Acheteurs</a>
-        <a href="#">Catégories</a>
-        <a href="#">Contact</a>
-
-        <select id="languageSwitcher">
-            <option value="fr">FR</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-        </select>
-    </nav>
+<!-- HEADER -->
+<header id="navbar">
+    <div class="nav-inner">
+        <div class="logo">BENIN<span>-QUALIFLOW</span></div>
+        <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="vendeurs.html">Vendeurs</a>
+            <a href="acheteurs.html">Acheteurs</a>
+            <a href="#categories">Catégories</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <select id="languageSwitcher" aria-label="Langue">
+                <option value="fr">🌍 FR</option>
+                <option value="en">🌍 EN</option>
+                <option value="es">🌍 ES</option>
+            </select>
+            <a href="vendeurs.html" class="btn-nav">Commencer</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1 data-fr="Connectez vendeurs et acheteurs au Bénin"
-        data-en="Connecting sellers and buyers in Benin"
-        data-es="Conectando vendedores y compradores en Benín">
-        Connectez vendeurs et acheteurs au Bénin
-    </h1>
-
-    <p data-fr="La marketplace territoriale moderne pour vendre et acheter localement."
-       data-en="A modern territorial marketplace to buy and sell locally."
-       data-es="Un mercado territorial moderno para comprar y vender localmente.">
-       La marketplace territoriale moderne pour vendre et acheter localement.
-    </p>
-
-    <div class="buttons">
-        <a href="vendeurs.html" class="btn primary">Je veux vendre</a>
-        <a href="acheteurs.html" class="btn secondary">Je veux acheter</a>
+    <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <div class="badge">
+            <span>🇧🇯</span>
+            <span>Fait au Bénin · 100% Local</span>
+        </div>
+        <h1 data-fr="Connectez vendeurs<br>et acheteurs<br><em>au Bénin</em>"
+            data-en="Connecting sellers<br>and buyers<br><em>in Benin</em>"
+            data-es="Conectando vendedores<br>y compradores<br><em>en Benín</em>">
+            Connectez vendeurs<br>et acheteurs<br><em>au Bénin</em>
+        </h1>
+        <p data-fr="La première marketplace territoriale moderne — achetez, vendez, et faites grandir votre business localement."
+           data-en="The first modern territorial marketplace — buy, sell, and grow your business locally."
+           data-es="El primer mercado territorial moderno — compra, vende y haz crecer tu negocio localmente.">
+           La première marketplace territoriale moderne — achetez, vendez, et faites grandir votre business localement.
+        </p>
+        <div class="hero-cta">
+            <a href="vendeurs.html" class="btn primary">
+                <i class="fa-solid fa-store"></i>
+                Je veux vendre
+            </a>
+            <a href="acheteurs.html" class="btn secondary">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Je veux acheter
+            </a>
+        </div>
+        <div class="stats-row">
+            <div class="stat">
+                <strong class="counter" data-target="1200">0</strong>
+                <span>Vendeurs actifs</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <strong class="counter" data-target="8400">0</strong>
+                <span>Produits listés</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <strong class="counter" data-target="12">0</strong>
+                <span>Villes couvertes</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="float-card card-a">
+            <i class="fa-solid fa-shirt"></i>
+            <span>Mode & Textile</span>
+            <small>342 annonces</small>
+        </div>
+        <div class="float-card card-b">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>Électronique</span>
+            <small>518 annonces</small>
+        </div>
+        <div class="float-card card-c">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Vendeur vérifié</span>
+        </div>
     </div>
 </section>
 
-<section class="how reveal">
+<!-- COMMENT ÇA MARCHE -->
+<section class="how reveal" id="how">
+    <div class="section-label">Le processus</div>
     <h2>Comment ça marche</h2>
+    <p class="section-sub">Simple, rapide, local. En 3 étapes vous êtes prêt.</p>
     <div class="steps">
-        <div class="card">Inscription simple</div>
-        <div class="card">Mise en relation directe</div>
-        <div class="card">Transaction locale</div>
-    </div>
-</section>
-
-<section class="categories reveal">
-    <h2>Catégories populaires</h2>
-    <div class="grid">
-        <div class="cat">Électronique</div>
-        <div class="cat">Mode</div>
-        <div class="cat">Maison</div>
-        <div class="cat">Services</div>
-    </div>
-</section>
-
-<footer>
-    <p>Cotonou – Bénin | © 2026 BENIN-QUALIFLOW</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-
+        <div class="step-card">
+            <div class="step-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="step-num">01</div>
+            <h3>Créez votre compte</h3>
+            <p>Inscrivez-vous en 2 minutes. Vendeur ou acheteur, votre profil est gratuit et sécurisé.</p>
+        </div>
+        <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-card">
+            <div class="step-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="step-num">02</div>
+            <h3>Mise en relation directe</h3>
+            <p>Notre algorithme connecte les acheteurs aux meilleurs vendeurs près de chez eux.</p>
+        </div>
+        <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-card">
+            <div class="step-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div
